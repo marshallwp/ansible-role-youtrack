@@ -10,11 +10,8 @@
   when: __link.stat.exists
 
 - name: configure | prepare startup options
-  vars:
-    new_opt: "{{ [{'name': '-J-Ddisable.configuration.wizard.on.upgrade', 'value': youtrack_disable_upgrade_wizard}] }}"
-    youtrack_opts: "{{ youtrack_options | rejectattr('name','equalto','-J-Ddisable.configuration.wizard.on.upgrade') + new_opt }}"
   ansible.builtin.set_fact:
-    __options_config: "{% for opt in youtrack_opts %}{{ opt.name }}={{ opt.value }}{% if not loop.last %} {% endif %}{% endfor %}"
+    __options_config: "{% for opt in youtrack_options %}{{ opt.name }}={{ opt.value }}{% if not loop.last %} {% endif %}{% endfor %}"
 
 - name: configure | save options
   ansible.builtin.copy:

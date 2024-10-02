@@ -34,7 +34,6 @@ JDK is not required because of embedded into archive version is used.
 | youtrack_backups_dir | YouTrack backups directory | `{{ youtrack_home_dir }}/backups` |
 | youtrack_restore_backup | Restore YourTrack from given backup file, all data will be removed, use this with caution | `false` |
 | youtrack_restore_backup_file | Backup file to restore | N/A |
-| youtrack_disable_upgrade_wizard | Skip the configuration wizard during upgrade operations. | `false` |
 | youtrack_options | YouTrack options, check [this](https://www.jetbrains.com/help/youtrack/server/Configure-JVM-Options.html) and [this](https://www.jetbrains.com/help/youtrack/server/YouTrack-Java-Start-Parameters.html) for the completed list | see `defaults/main.yml` |
 
 ## Example Playbook

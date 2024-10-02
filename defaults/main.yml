@@ -11,7 +11,6 @@ youtrack_releases_dir: "{{ youtrack_home_dir }}/releases"
 youtrack_backups_dir: "{{ youtrack_home_dir }}/backups"
 youtrack_restore_backup: false # use this option carefully, youtrack data directory will be deleted
 youtrack_restore_backup_file: ""
-youtrack_disable_upgrade_wizard: false
 # YouTrack options: https://www.jetbrains.com/help/youtrack/server/YouTrack-Java-Start-Parameters.html
 youtrack_options:
   - name: "--data-dir"
